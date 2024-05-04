@@ -15,7 +15,7 @@
 
 ## Contributing
 
-See [Contributing](CONTRIBUTING)
+See [Contributing](CONTRIBUTING.md)
 
 ## License
 
