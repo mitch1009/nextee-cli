@@ -2,7 +2,7 @@
   "name": "nextee",
   "version": "0.0.0",
   "source": "src/main.ts",
-  "types": "dist/**/*.ts",
+  "types": "out/**/*.ts",
   "description": "nextee tenplate initializer",
   "repository": "https://github.com/mitch1009/nextee-cli.git",
   "homepage": "https://cli.nextee.site",
