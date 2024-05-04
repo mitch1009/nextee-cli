@@ -7,9 +7,9 @@
 [![npm license](https://img.shields.io/npm/l/nextee.svg)](https://www.npmjs.com/package/nextee)
 [![npm downloads](https://img.shields.io/npm/dm/nextee.svg)](https://www.npmjs.com/package/nextee)
 
-Simply run `npx nextee <app-name>` to initialize a modern Next.js project with prisma, tailwind, graphql, trpc and server actions already configure for your application development.
+`nextee-cli` is a CLI for [nextee](https://github.com/mitch1009/nextee), a modern Next.js project with prisma, tailwind, graphql, trpc and server actions already configure for your application development.
 
-## Installation
+## usage
 
 `npx nextee <app-name>`
 
