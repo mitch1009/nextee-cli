@@ -22,14 +22,14 @@
   "main": "out/main.js",
   "module": "out/main.js",
   "type": "module",
-  "aliase": {
+  "alias": {
     "@": "./src"
   },
   "bin": {
     "nextee": "out/main.js"
   },
   "files": [
-    "out",
+    "out/**/*",
     "README.md",
     "LICENSE"
   ],
@@ -40,7 +40,8 @@
     "prepublish": "pnpm build",
     "nextee": "node ./out/main.js",
     "pub": "changeset publish",
-    "pb": "parcel build"
+    "pb": "parcel build",
+    "test": "jest"
   },
   "publishConfig": {
     "access": "public",
