@@ -1,11 +1,13 @@
 name: Release
 
 on:
+  push:
+    tags:
+      - '*@*.*.*'
   release:
     types: [created]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,8 +16,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-      - run: npm ci
-      - run: npm run build
+      - name : Setup pnpm 
+        uses: pnpm/action-setup@v2.2.4 
+        with:
+          version: 8
+          run_install: true
+      - run: pnpm build
 
   publish-npm:
     needs: build
@@ -26,7 +32,12 @@ jobs:
         with:
           node-version: 18.x
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
+      - name : Setup pnpm 
+        uses: pnpm/action-setup@v2.2.4 
+        with:
+            version: 8
+            run_install: false
+      - run: pnpm install --no-frozen-lockfile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -36,13 +47,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
+      - name: create a release 
+        uses: softprops/action-gh-release@v2.0.4
+        if: startsWith(github.ref, 'refs/tags/')
