@@ -41,6 +41,7 @@
     "nextee": "node ./out/main.js",
     "pub": "changeset publish",
     "pb": "parcel build",
+    "release": "standard-version  --tag-prefix 'nextee-cli@'",
     "test": "jest"
   },
   "publishConfig": {
