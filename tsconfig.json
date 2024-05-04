@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "incremental": true, /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
+    "target": "ESNext", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "experimentalDecorators": true, /* Enable experimental support for legacy experimental decorators. */
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext", /* Specify what module code is generated. */
+    "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+    "rootDir": "src", /* Specify the root folder within your source files. */
+    "baseUrl": "./", /* Specify the base directory to resolve non-relative module names. */
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "resolvePackageJsonImports": true, /* Use the package.json 'imports' field when resolving imports. */
+    "declaration": true, /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "outDir": "out", /* Specify an output folder for all emitted files. */
+    "importHelpers": true, /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
+    "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+    "strict": true, 
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/scripts/mailer.ts",
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

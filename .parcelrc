@@ -1,0 +1,22 @@
+{
+    "extends": "@parcel/config-default",
+    "resolvers": [
+        "parcel-resolver-tspaths"
+    ],
+    "compressors": {
+        "*.{js,ts}": [
+            "@parcel/compressor-brotli",
+            "@parcel/compressor-gzip"
+        ]
+    },
+    "transformers": {
+        "*.{ts,js}": [
+            "@parcel/transformer-typescript-tsc"
+        ]
+    },
+    "validators": {
+        "*.{ts,js}": [
+            "@parcel/validator-typescript"
+        ]
+    }
+}
