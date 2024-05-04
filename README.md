@@ -15,7 +15,7 @@ Simply run `npx nextee <app-name>` to initialize a modern Next.js project with p
 
 ## Contributing
 
-See [Contributing](CONTRIBUTING.md)
+See [Contributing](CONTRIBUTING)
 
 ## License
 
